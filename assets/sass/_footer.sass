@@ -3,74 +3,35 @@
 		color: #fff 
 		&:hover
 			color: $secondary
-	.upper
-		background-color: #fff	
-		color: #000		
-		font-size: 0.8em
-		padding: $spacing 0
-		.info
-			+make-sm-column(4)	
-			min-height: 5em		
-			*
-				padding-left: 3.3em
-			*:first-child
-				padding-top: 0.5em	
-			p 
-				margin-bottom: 0	
-			&:before
-				font-family: "FontAwesome"
-				content: "\f095"
-				font-size: 3em
-				float: left
-				color: $secondary	
-				color: #000		
-		.location
-			@extend .info			
-			&:before				
-				content: "\f041"				
-		.opened
-			@extend .info		
-			&:before				
-				content: "\f017"
+	
 	.middle
-		font-size: 0.7em		
+	
 		color: #000
 		padding: $spacing 0px
 		.footer-links
-			+make-sm-column(4)
-			margin-bottom: 1em
+			+make-sm-column(3)
+			margin-bottom: 1em			
 			a 
 				color: #000
+				font-size: 0.8em
 				&:hover 
 					color: $secondary
-		.mailchimp
-			+make-sm-column(4)
+		.about
+			+make-sm-column(3)
 			margin-bottom: 1em
-			input 
-				+fancy-input
-				border: 1px solid $secondary
-				line-height: 2em
-				max-width: 200px
-				background-color: #333
-				margin-bottom: 0.5em
-				&:focus
-					background-color: darken($secondary,20%)
-					border: 1px solid $secondary
-					color: #fff				
-					box-shadow: none
-			.newsletter
-				+transition(all 0.2s ease-in)
-				background-color: $secondary
-				color: #fff
-				display: inline-block
-				border: none 
-				max-width: 200px
-				text-align: center 
-				outline: none
-				&:hover 
-					background-color: $primary		
-		.logo-partner	
-			+make-sm-column(4)	
+			font-size: 0.8em
+			h3
+				font-weight: 400
+				font-size: 1em
+				text-transform: uppercase	
+				color: $primary
+				display: block
+				margin-bottom: $spacing
+				padding: 0 0 $spacing/2 0
+				border-bottom: 1px solid #eee
+				
+		.social-fb	
+			+make-sm-column(3)	
 			margin-bottom: 1em
 			a 
 				color: $secondary		
@@ -78,8 +39,7 @@
 				+h-nav 
 			li 
 				width: 25%
-			img 
-				max-width: 80px
+
 			.compari
 				padding-top: 14px
 			.shopmania
@@ -87,30 +47,13 @@
 			.trusted
 				img 
 					max-width: 50px		
-	.lower
-		font-size: 0.8em
-		color: #fff
-		background-color: #000				
-		.footer-logo
-			+make-sm-column(4)
-			margin-bottom: 1em
-		.footer-nav 
-			+make-sm-column(4)
-			margin-bottom: 1em
-			ul 
-				+h-nav
-				margin-bottom: 0.5em
-			a 
-				margin-right: 0.5em	
-			p 
-				margin-bottom: 0.5em	
-		.footer-pay
-			+make-sm-column(4)		
-			margin-bottom: 1em
+	
 .footer-headline
-	font-weight: 700
-	font-size: 1em
+	font-weight: 400
+	font-size: 0.8em
 	text-transform: uppercase	
-	color: $secondary
+	color: $primary
 	display: block
-	margin-bottom: 0.5em
+	margin-bottom: $spacing
+	padding: 0 0 $spacing/2 0
+	border-bottom: 1px solid #eee

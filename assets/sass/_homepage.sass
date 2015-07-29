@@ -17,15 +17,27 @@
 	.test4
 		+box-img-only()
 .featured-list	
-.product-list
-	+clearfix
-	+make-row()
-	.item 		
-		+make-xs-column(6)
-		+make-sm-column(3)
-		+make-md-column(2,10)
-		+make-lg-column(2)		
+	h2
+		text-transform: uppercase
+		font-size: 1em
+		font-weight: 400
+		color: #222
+		padding-bottom: $spacing/2
+		margin-bottom: $spacing
+		border-bottom: 1px solid #eee
+	.product-list
+		+clearfix
+		+make-row
+		.item 		
+			+make-xs-column(6)
+			+make-sm-column(4)
+			+make-md-column(2,10)
+			+make-lg-column(2,10)	
+			h3
+				min-height: 15px !important
+
 .home-slider-wrapper
 	+make-row
-	padding: $spacing		
+	padding: $spacing	
+	position: relative	
 	
