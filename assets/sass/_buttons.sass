@@ -5,7 +5,7 @@
 	outline: none
 	box-shadow: none
 	&:hover
-		background-color: $blue		
+		background-color: $purple		
 		color: #fff
 .go-checkout
 	@extend .btn-submit
@@ -31,7 +31,7 @@
 	outline: none
 	box-shadow: none
 	&:hover
-		background-color: $blue
+		background-color: $purple
 		color: #fff	
 	@media (max-width: $screen-sm-min - 1)
 		text-align: center
@@ -53,7 +53,7 @@
 	box-shadow: none
 	&:hover
 		color: #fff
-		background-color: $blue	
+		background-color: $purple	
 	@media (max-width: $screen-sm-min - 1)
 		text-align: center
 		background-color: #fff 
@@ -125,3 +125,14 @@
 	width: 200px
 	line-height: 2.5em
 	font-weight: 600
+.btn-black
+	+transition(all 0.2s ease-in)
+	background-color: $black
+	color: #fff
+	outline: none
+	box-shadow: none
+	padding: 0.5em 1em
+
+	&:hover
+		background-color: $purple		
+		color: #fff	

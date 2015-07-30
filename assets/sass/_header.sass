@@ -122,23 +122,28 @@
 				z-index: 2
 				width: auto
 		.header-cos	
-			line-height: 2.2em
+			line-height: 2.7em
 			display: inline-block				
 			padding-top: 0px			
 			float: right
+			margin: 1.8em 0 0 5px
+			font-size: 0.8em
+			.cart-icon
+				font-size: 1em
+				margin-right: 0.5em
+				color: #000
 			a 
-				background-color: $primary
+				border: 1px solid #e6e6e6			
 				padding: 0 1em
 				display: block
-				color: #fff	
+				color: #000
 				&:hover 
 					background-color: #000
+					color: #fff
 					.cart-icon 
-						color: $primary
-			.cart-icon
-				font-size: 1.2em
-				margin-right: 0.5em
-				color: #000	
+						color: #fff
+			
+				
 			.cos 
 				text-decoration: underline	
 				margin-left: 0.5em
@@ -149,6 +154,7 @@
 			margin: 23px 0 0 5px
 			line-height: 2.1em
 			border: 1px solid #e6e6e6
+
 			p 
 				display: inline-block
 				margin: 0
@@ -160,6 +166,12 @@
 					color: #000
 			i 
 				margin: 0 5px 0 0
+				
+			&:hover 
+				background-color: #000
+				color: #fff
+				a
+					color: #fff
 		.header-phone, .header-delivery
 			display: none
 			+make-sm-column(4)			
