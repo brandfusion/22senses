@@ -16,8 +16,7 @@ body
 .block-header
 	font-weight: 800
 	font-size: 1.4em
-	border-bottom: 1px solid #ddd
-	margin-bottom: 0.5em
+	margin-bottom: $spacing/2
 	line-height: 1.6em
 	// text-transform: uppercase
 .page-header
@@ -41,25 +40,31 @@ body
 	+make-sm-column(4)
 	+make-md-column(2)
 .breadcrumbs
+	background: #f3f3f3
+	margin: 0 0 $spacing 0
+	clear: both
+	width: 100%
+	padding: 0.3em $spacing
+	float: left
+
 	ul
 		+h-nav
 		a
 			color: #000			
 			&:hover
-				color: $blue
+				color: $primary
 		li 
 			font-size: 0.8em
 			font-weight: 400
 			line-height: 2.2em
 			&:after
-				content: "/"
+				content: "-"
 				margin-left: 5px
 				margin-right: 5px
 				font-weight: 700
-				color: $blue
+				color: $primary
 			&:last-child:after
-				// content: ""	
-				color: $red
+				display: none
 .wrap
 	@extend .container
 	// background-color: $gray-main
@@ -80,8 +85,8 @@ body
 			background-color: rgba(255,255,255,0.6)
 .modal-content
 	border-radius: 0px 
-	border: 1px solid $blue
-	box-shadow: 0px 0px 3px $blue		
+	border: 1px solid $secondary
+	box-shadow: 0px 0px 3px $secondary		
 	font-size: 0.8em
 	a 
 		color: #000
@@ -92,7 +97,7 @@ body
 		padding: 0.5em $spacing
 		h6	
 			font-weight: 700
-			color: $blue
+			color: $secondary
 			font-size: 1em			
 		button
 			outline: none
@@ -182,11 +187,21 @@ body
 .general-paragraph
 	font-size: 0.8em
 	padding: 5% 0px
-	max-width: 700px
 	margin: 0 auto
 	a 
 		color: #000
 		text-decoration: underline
+	h1 
+		margin: 0px 0px 0.5em
+		font-weight: 300
+		font-size: 1.6em
+		text-transform: uppercase
+		background-color: #fff
+		color: #000
+		border-bottom: none
+		font-weight: 800
+		clear: both
+
 	h3 
 		font-weight: 800
 		text-transform: uppercase	
@@ -195,7 +210,4 @@ body
 			text-decoration: none
 			&:hover 
 				color: #000		
-	h1 
-		text-align: center
-		font-weight: 300
-		font-size: 3em	
+	

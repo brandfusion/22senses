@@ -130,7 +130,7 @@
 			font-size: 0.8em
 			.cart-icon
 				font-size: 1em
-				margin-right: 0.5em
+				margin-right: $spacing
 				color: #000
 			a 
 				border: 1px solid #e6e6e6			
@@ -146,7 +146,14 @@
 				
 			.cos 
 				text-decoration: underline	
-				margin-left: 0.5em
+				margin-left: $spacing/2
+			.produse 
+				position: relative
+				.totalProduct 
+					position: absolute
+					top: -15px
+					left: -15px
+
 		.header-login
 			float: right
 			display: inline-block
@@ -166,7 +173,7 @@
 					color: #000
 			i 
 				margin: 0 5px 0 0
-				
+
 			&:hover 
 				background-color: #000
 				color: #fff
@@ -229,10 +236,12 @@
 		margin-right: -4px
 		padding: 0px
 		vertical-align: top
-		line-height: 1.8
+		line-height: 1.7
 		padding: 0 0.5em
 		+transition(all 0.2s ease-in)
 		width: 20em
+		color: #222
+
 		@media (min-width: $screen-sm-min)
 			width: 10em
 			&:focus
@@ -242,8 +251,21 @@
 		background-color: #fff
 		border: none
 		color: #000
-		font-size: 1.2em
-		line-height: 1.2
+		font-size: 0.8em
+		line-height: 1.8
+		padding: 0 0.5em
 		&:hover
 			background-color: #fff
 			color: $accent
+
+.top-links 
+	li 
+		list-style-type: none
+		display: inline-block		
+		margin: 0 0 0 $spacing/2
+		
+		a
+			color: $black
+			font-size: 0.7em
+			&:hover 
+				color: $primary
