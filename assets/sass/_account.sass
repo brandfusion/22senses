@@ -1,16 +1,64 @@
 .account 
 	+make-row
+	min-height: 500px
+
+	.account-block
+		+make-sm-column(3)
+		+make-md-column(3)
+		+make-xs-column(12)
+		
+		a
+			display: block
+			line-height: 1.5
+			border-bottom: 1px solid #f3f3f3
+			font-size: 0.8em
+			padding: $spacing/2
+			&:hover
+				background: #f3f3f3
+
+	h1.account-header
+		margin: 0px 0px $spacing/2
+		padding-left: $spacing
+		font-weight: 300
+		font-size: 1.6em
+		text-transform: uppercase
+		// border-bottom: 1px solid #000
+		background-color: #fff
+		color: #000
+		border-bottom: none
+		font-weight: 800
+		clear: both
+
+		&:after
+			margin-left: 5px
+			margin-right: 5px
+			font-weight: 300
+			color: $primary
+			border-bottom: 1px solid #eee
 	h2 
 		font-weight: 300
 		margin-bottom: 0.5em
 	.account-form
 		font-size: 0.8em
-		+make-sm-column(6)
+		+make-sm-column(9)
+		+make-xs-column(12)
+
 		label 
 			width: 200px
 			display: inline-block
 			
 		input[type="text"],input[type="email"],input[type="password"]
+			width: 200px
+			max-width: 200px
+			border: 1px solid #aaa
+			box-shadow: 0px 0px 3px #eee	
+			line-height: 2em
+			padding: 0 0.5em
+			margin: 0 0 0 0
+			&:focus 
+				border-color: $secondary
+				box-shadow: 0px 0px 3px rgba(0,190,212,0.4)
+		select 
 			width: 200px
 			max-width: 200px
 			border: 1px solid #aaa
@@ -48,3 +96,47 @@
 		+make-sm-column(12)		
 	.hide
 		display: none !important
+
+	.box-address
+		+make-row
+		
+		.description
+			+make-sm-column(12)
+			+make-xs-column(12)
+		.address
+			+make-sm-column(4)
+			+make-xs-column(12)
+		.state
+			+make-sm-column(2)
+			+make-xs-column(12)
+		.city
+			+make-sm-column(2)
+			+make-xs-column(12)
+		.edit-address, .delete, .default  
+			+make-sm-column(1)
+			+make-xs-column(12)
+			background: none
+			color: $primary
+		.default 
+			+make-sm-column(2)
+			+make-xs-column(12)
+		hr
+			+make-sm-column(12)
+			+make-xs-column(12)
+			color: #f5f5f5
+			background: #f5f5f5
+			border: none
+			height: 1px
+	.order-tab
+		width: 100% 
+
+		th
+			padding: $spacing/2 $spacing
+			background: #ececec
+			text-align: left
+			border-right: 1px solid #fff
+		td
+			padding: $spacing/2 $spacing
+			border-bottom: 1px solid #f5f5f5
+	.sort 
+		float: right

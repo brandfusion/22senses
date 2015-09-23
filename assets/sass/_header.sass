@@ -115,12 +115,16 @@
 		.logo
 			+make-xs-column(6)
 			padding-left: 0	
+
 			@media (min-width: 768px)				
 				position: absolute
 				top: 5px
 				left: 0px
 				z-index: 2
 				width: auto
+			@media (max-width: 480px)
+				img
+					margin: 5px 0 0 0
 		.header-cos	
 			line-height: 2.7em
 			display: inline-block				
@@ -164,7 +168,9 @@
 
 			p 
 				display: inline-block
-				margin: 0
+				margin: 0 $spacing/2 0 0
+				color: #000
+				font-size: 0.8em
 			a 
 				color: #000
 				margin-right: 0.5em
@@ -177,7 +183,7 @@
 			&:hover 
 				background-color: #000
 				color: #fff
-				a
+				a, p
 					color: #fff
 		.header-phone, .header-delivery
 			display: none

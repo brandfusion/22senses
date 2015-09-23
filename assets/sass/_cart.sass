@@ -11,7 +11,7 @@
 		width: 45%
 		float: left
 	@media (min-width: $screen-md-min)
-		width: 55%	
+		width: 50%	
 .cart-delivery
 	padding: 0 $spacing
 	@media (min-width: $screen-sm-min)
@@ -74,7 +74,7 @@
 		width: 70px	
 		@media (min-width: $screen-sm-min)
 			width: 100px		
-	.cart-price 		
+	.cart-price 			
 		span 
 			font-size: 0.7em
 			color: #aaa	
@@ -90,6 +90,10 @@
 					font-weight: 400
 					font-size: 0.7em
 					color: #aaa	
+	@media (max-width: 480px)
+		.cart-price 
+			float: left
+			width: 50%
 	.receipt-price 
 		padding: 0 $spacing
 		@media (min-width: $screen-sm-min)
