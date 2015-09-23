@@ -1,7 +1,10 @@
 .article-page 
 	padding: 0px
-	font-size: 0.8em
-	+make-row
+	max-width: 1170px
+	padding: 0 $spacing
+	margin: 0 auto
+	padding: 1em	
+	+clearfix
 	.inline
 		font-size: 0.8em
 		margin-bottom: 0.5em
@@ -46,31 +49,41 @@
 	.header
 		margin-bottom: 1em		
 .article-aside-list 	
-	+make-md-column(4)
+	font-size: 0.8em
 	.media
 		margin: 0 0 1em		
 	.media-object
 		width: 60px		
-	h4 	
+	h4 
+		width: 90%
 		+text-overflow()
-		font-weight: 700
-		text-transform: uppercase
-		margin-bottom: 1em
+		font-size: 1.4em
+		@media (max-width: 767px)
+			width: 100%
+			background-color: #FD9494
+			font-size: 1.4em
+			text-transform: uppercase
+			color: #fff 
+			text-align: center
+			font-weight: 400 
+			line-height: 2em
 		a
 			display: inline
-	h5 
-		font-size: 1em
-		padding: 5px 0
-		font-weight: 400
-		border-bottom: 1px dotted #ddd
 	p
 		margin-bottom: 0
 	a
 		color: #333	
+		display: block
+		line-height: 1.4	
+		@media (max-width: 767px)
+			line-height: 2em
+			font-size: 1.2em
 		&:hover 
-			color: $secondary	
+			color: $secondary
+	.side-categories, .side-tags
+		margin-bottom: 0.5em		
 .article-list
-	+make-md-column(8)
+	+make-sm-column(9)
 	.media
 		margin-bottom: 1em
 		border-bottom: 1px solid #eee
@@ -80,11 +93,7 @@
 	.media-object
 		width: 180px	
 		@media (max-width:768px)
-			width: 60px	
-	h1 
-		font-size: 1em
-	.section-header 
-		font-size: initial
+			width: 60px		
 	h2
 		font-weight: 400
 		@media (max-width:480px)
@@ -97,24 +106,32 @@
 		margin-bottom: 0.5em
 	.inline
 		margin-bottom: 0.2em
-.post-short 
-	margin-top: 1em
-	.post-date
-		color: #999
-	a 
-		color:	#000
-		&:hover 
-			color: $secondary
-	.btn-read-more 
-		color: $red
-		&:hover
-			color: $secondary
-		i 
-			vertical-align: middle
-			margin: 0 0 0 2px	
-	iframe
-		max-width: 100%	
-	table
-		width: 100%
-		tr td 
-			font-size: initial		
+.blog-aside
+	+clearfix
+	font-size: 0.8em
+.categories, .tags
+	display: inline-block
+	p 
+		display: inline
+		&:last-child
+			span
+				display: none				
+	.categories 
+		padding-right: 0.5em
+		margin-right: 0.5em			
+.btn-read-more
+	.fa 
+		margin-left: 0.5em		
+.article-item
+	padding-left: 0
+	@media (min-width: 768px) and (max-width: 1240px)
+		padding-left: 4em
+	@media (max-width: 767px)
+		padding-top: 2em			
+.last-article-list
+	@media (max-width: 767px)
+		font-size: initial
+		h5 
+			font-weight: 400
+.addthis_native_toolbox
+	max-width: 100%			
