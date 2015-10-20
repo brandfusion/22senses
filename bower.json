@@ -19,5 +19,8 @@
     "modernizr": "~2.8.3",
     "bootstrap-sass": "~3.3.3",
     "owl-carousel2": "*"
+  },
+  "devDependencies": {
+    "flexslider": "~2.5.0"
   }
 }

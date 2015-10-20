@@ -1,181 +1,64 @@
 .main-nav	
-	// border-bottom: 2px solid $secondary
-	
-	border-top: 2px solid #222
-	padding: 2px 0 0 0
-	display: none
-	margin-bottom: 2px
+	// border-bottom: 2px solid $secondary	
+	// border-top: 2px solid #222	
+	display: none	
 	float: left
-	width: 100%
-	
+	width: 100%	
+	font-size: 0.8em
+	+clearfix
+	border-bottom: 1px solid #000
 	@media (min-width: $screen-sm-min)	
 		display: block
 	ul
-		+h-nav
-		// position: relative
-		float: left
-		// max-width: 75%
-	li 
-		margin: 0 2px 0 0
+		+h-nav				
+	li 		
 		position: relative
-		z-index: 99
-		a i
-			margin: 0 -0.5em 0 0.5em
-
-
+		&:hover 
+			a
+				background-color: $primary	
+				color: #fff
+				text-decoration: none
 	.home 
-		background-color: $primary
+		// background-color: $primary
 		i 
 			font-size: 1.3em
-			color: #fff
-			margin: 0
-
-	a
-		+nav-level-1(#000,#fff,$red,#fff)
-		font-weight: 400
-		text-transform: uppercase
-		font-size: 0.8em
-		font-weight: 400
-		color: #222
-		padding: 0.6em 1em
-		display: block
-		background-color: transparent
-		// &.active 
-		// 	color: #000		
-	a.inpath.level-2
-		background-color: $primary
-			
-	a.level-3
-		background-color: #fff
-		color: #000
-		width: 100%
-		font-size: 0.7em
-		display: block 
-		border-bottom: 1px solid #eee
-		padding-left: 0
-		margin: $spacing/2 0
-		padding: $spacing/2 0
-		// background-color: transparent
-		// background-color: #eee
-		text-align: left
-	a.level-4 
-		display: block
-		background-color: #fff
-		color: #000
-		font-size: 0.8em
-		padding-left: 0
-		font-weight: 400
-		text-transform: none
-		background-color: transparent
-		span 
-			font-size: 0.8em
-			background-color: #ddd
-			color: #fff
-			display: inline-block
-			margin: 0 0 0 5px 
-			padding: 0 3px 2px 3px
-			line-height: 1		
-		&:hover 
-			padding-left: 0.2em
-			// background-color: $primary
 			// color: #fff
-			color: $primary
-			font-weight: 400
-			&:before 
-				font-family: "FontAwesome"
-				content: "\f054"
-				// color: $primary
-				margin-right: 0.5em
-				font-size: 0.6em
-				vertical-align: middle
-	.dropdown		
-		.level-2:after
-			font-family: "FontAwesome"
-			content: "\f107"
-			font-size: 0.8em
-			margin-left: 0.5em	
-	.dropdown:hover
-		a
-			background: $primary
-			color: #fff		
-		.dropdown-menu.M2
-			display: block	
-
-
+			margin: 0
+	a		
+		display: block	
+		font-weight: 400
+		text-transform: uppercase		
+		font-weight: 400
+		color: #000
+		padding: 0.4em 1em
+		line-height: 2	
+		i 
+			margin-left: 0.5em
+	.dropdown
+		&:hover 
+			.dropdown-menu
+				display: block	
 	.dropdown-menu
 		display: none		
 		+v-nav
-		+clearfix
+		font-size: 0.9em
 		padding: 0
-		margin: 0
-		li 
-			float: left			
-			width: 195px
-			display: block
-			padding: 0
+		margin: 0		
+		background-color: $primary
+		color: #fff
+		position: absolute
+		top: 100%
+		left: 0	
+		border-radius: 0px
+		border: none
+		box-shadow: none
+		li a 
+			line-height: 1.6em
+			padding: 0.4em 1em 
+			text-transform: none 
+			&:hover 
+				background-color: $red
 
-		&.M2
-			padding: 0
-			border-bottom: 2px solid $primary
-			position: absolute
-			top: 100%
-			left: 0
-			width: 195px
-			+box-shadow(0px 0px 2px #aaa)	
-			background-color: #fff
-			// +background-image(linear-gradient(#fff, #fafafa))
-			li 
-				position: relative
-				padding: 0
-				display: block
-				a
-					background: $white
-					color: #222	
-					&:hover 
-						background: $primary
-						color: $white
-						border-color: $primary
-						display: block
-		&.M3 
-			display: block
-			position: relative
-			top: 0
-			width: 100%
-			li 
-				width: 100%
-				display: inline-block
-				float: left	
-				padding-left: 0	
-		&.M4
-			display: block
-			position: relative
-			top: 0
-			width: 100%
-			li 
-				width: 100%
-				display: inline-block
-				float: left	
-				padding-left: 0	
-		
-		// .level-2			
-		// 	a
-		// 		+nav-level-2(transparent, $accent, transparent, $accent)
-		// 		text-transform: uppercase
-		// 		font-weight: 700
-		// 		font-size: 0.9em
-		// 		padding-left: 0.8em
-		// .level-3
-		// 	a
-		// 		+nav-level-2(transparent, #000, transparent, $accent)
-		// 		font-size: 0.8em
-		// 		text-transform: none
-		// 		font-weight: 400			
-		// 		padding-left: 1em
-		.level-2-container
-			padding: 1em $grid-gutter-width/2
-			float: left		
-	.teaser
-		float: left
 
 .mobile-wrapper
 	background-color: #fff

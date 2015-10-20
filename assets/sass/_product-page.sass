@@ -41,21 +41,22 @@
           width: 15%
         
     .main-image
-      +make-sm-column(12)
-      +make-md-column(12)
-      +make-lg-column(12)
+      // +make-sm-column(12)
+      // +make-md-column(12)
+      // +make-lg-column(12)
       position: relative
       // padding-right: 0
       margin-bottom: $spacing
       background-color: #fff
-      border: 1px solid #eee
+      // border: 1px solid #eee
       img 
         margin: 0 auto
         max-width: 100%
+        max-width: 450px      
         // box-shadow: 0px 0px 6px #ddd
         // border: 1px solid #00bed4  
-      @media (min-width: $screen-md-min)
-        float: right
+      // @media (min-width: $screen-md-min)
+      //   float: right
       @media (max-width: $screen-lg-min)
         padding-right: $spacing
         padding: 0
@@ -111,7 +112,7 @@
     .product-code
       color: #949494
       font-weight: 300
-      margin-top: $spacing/2
+      // margin-top: $spacing/2
     .product-info-secondary
       // padding: 0px 0px $spacing/2
       clear: both
@@ -178,7 +179,7 @@
       font-size: 1.5em
       line-height: 1em
       font-weight: 600
-      color: $purple
+      color: #000
       margin: 0.2em 0 0 0
       sup
         font-size: 0.4em
@@ -340,30 +341,14 @@
         top: 0
         right: 0.3em
 .add-to-basket
-  background-color: #D41C51
-  padding: 0.2em 0.8em
-  line-height: 2em
-  outline: none
-  border: none
-  color: #fff
-  font-size: 0.8em
-  +transition(all 0.2s ease-in)
-
-  &:before    
-    +transition(all 0.2s ease-in)
+  @extend .button-action
+  font-size: 0.8em 
+  line-height: 2.3em
+  &:before
     font-family: "FontAwesome"
     content: "\f07a"
     font-weight: 300
-    margin-right: 0.5em
-    font-size: 1em
-    float: left
-    display: block
-  &:hover   
-    color: #fff
-    background-color: $purple
-    &:before
-      transform: scale(1.2)
-      // color: $red
+    margin-right: 0.5em 
 .submit-order
   p
     display: inline-block
@@ -603,3 +588,30 @@
     font-weight: 700    
   span  
     +make-sm-column(9)
+.product-description-short
+  clear: both
+  padding-bottom: 1em
+  margin: 0
+  font-size: 0.9em
+  border: 1px solid #eee
+  background-color: rgba(255,255,255,0.6)
+  padding: 1em
+  position: relative
+  li p:before 
+    font-family: "FontAwesome"
+    content: "\f111"
+    margin-right: 1em
+    color: #EFC3CF
+    font-size: 0.5em
+    vertical-align: middle
+.product-detail
+  +make-sm-column(6)
+  font-size: 0.9em
+  .style 
+    border-top: 1px solid #eee
+  h2, .title 
+    font-weight: 600  
+    font-size: 1.2em
+    line-height: 2em  
+.product-detail-aside
+  +make-sm-column(6)     
