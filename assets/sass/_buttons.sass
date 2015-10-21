@@ -1,3 +1,17 @@
+.button-action
+	+transition(all 0.2s ease-out)			
+	background-color: $primary
+	color: #fff
+	text-align: center
+	line-height: 2em
+	padding: 0px 1em 
+	box-shadow: 2px 2px 0px #F9A8BF
+	outline: none
+	&:hover			
+		box-shadow: 2px 2px 0px #E99EF7
+		background-color: $purplesecondary				
+		text-decoration: none 
+		color: #fff
 .btn-submit
 	+transition(all 0.2s ease-in)
 	background-color: $red	
@@ -8,9 +22,7 @@
 		background-color: $purple		
 		color: #fff
 .go-checkout
-	@extend .btn-submit
-	line-height: 2em
-	padding: 0 1em
+	@extend .button-action
 	@media (max-width: $screen-sm-min - 1)
 		width: 100%
 		text-align: center
@@ -23,16 +35,10 @@
 			content: "\f046"
 			margin-right: 0.5em
 .clear-cart
-	+transition(all 0.2s ease-in)
-	line-height: 2em
-	padding: 0 1em
-	background-color: #ddd	
-	color: #fff
-	outline: none
-	box-shadow: none
-	&:hover
-		background-color: $purple
-		color: #fff	
+	@extend .button-action
+	background-color: #ddd
+	box-shadow: 2px 2px 0px #eee
+	color: #979797
 	@media (max-width: $screen-sm-min - 1)
 		text-align: center
 		font-size: 0.8em
@@ -146,16 +152,3 @@
 	&:hover
 		background-color: $purple		
 		color: #fff	
-.button-action
-	+transition(all 0.2s ease-out)			
-	background-color: $primary
-	color: #fff
-	text-align: center
-	line-height: 2em
-	padding: 0px 1em 
-	box-shadow: 2px 2px 0px #F9A8BF
-	&:hover			
-		box-shadow: 2px 2px 0px #E99EF7
-		background-color: $purplesecondary				
-		text-decoration: none 
-		color: #fff

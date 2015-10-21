@@ -606,12 +606,25 @@
     vertical-align: middle
 .product-detail
   +make-sm-column(6)
-  font-size: 0.9em
-  .style 
-    border-top: 1px solid #eee
-  h2, .title 
+  font-size: 0.9em     
+  h2
+    border-top: 1px solid #363636
     font-weight: 600  
     font-size: 1.2em
-    line-height: 2em  
+    line-height: 4em  
+    margin-top: 1.5em
+  h2:first-child 
+    margin-top: 0  
 .product-detail-aside
-  +make-sm-column(6)     
+  +make-sm-column(6)    
+  .product-video-item
+    +make-xs-column(12)
+    margin-bottom: $spacing*2 
+.product-list--recommended  
+  .item 
+    +make-sm-column(4)
+    +make-xs-column(12)
+.product-list--samecategory
+  .item 
+    +make-sm-column(4)
+    +make-xs-column(12)    
