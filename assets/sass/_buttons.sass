@@ -81,42 +81,27 @@
 	text-align: center 
 	&:hover 
 		background-color: $primary
-.auth-clients
-	+transition(all 0.2s ease-in)
-	background-color: $secondary
+.checkout-user-login
+	+transition(all 0.3s ease-out)
+	background-color: $primary
 	color: #fff
 	text-align: center
 	padding: 0.5em 1em
 	font-weight: 600
-	margin-bottom: 0.5em
+	margin-bottom: 1em
+	border-radius: 0.5em
+	font-size: 0.7em
+	outline: none
+	box-shadow: none
 	&:after
 		font-family: "FontAwesome"
 		content: "\f090"
 		margin-left: 0.5em
 		font-weight: 400
-		display: inline-block
-		+transition(all 0.2s ease-in)
+		display: inline-block		
 	&:hover 
 		background-color: #000
 		color: #fff
-		&:after
-			+rotate(90deg)
-	&.caret
-		&:after
-			+rotate(90deg)
-.login
-	width: 200px	
-	border: none
-	outline: none
-	display: inline-block
-	background-color: $secondary
-	color: #fff
-	font-size: 0.8em
-	text-transform: uppercase
-	font-weight: 700
-	line-height: 2.7em
-	&:hover 
-		background-color: #000	
 .place-order
 	@extend .go-checkout
 	display: inline-block

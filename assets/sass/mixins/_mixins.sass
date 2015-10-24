@@ -1,83 +1,66 @@
 =h-nav($pad: 0px)
-	+clearfix
-	list-style-type: none
-	padding-left: $pad
-	li 
-		float: left
-=v-nav	
-	list-style-type: none
-	li
-		float: none	
+  +clearfix
+  list-style-type: none
+  padding-left: $pad
+  li 
+    float: left
+=v-nav  
+  list-style-type: none
+  li
+    float: none 
 =justify-nav
-	ul
-		list-style-type: none
-	li
-		display: table-cell
+  ul
+    list-style-type: none
+  li
+    display: table-cell    
 
 =fancy-input
-	+transition(all 0.2s ease-in)
-	outline: none
-	border: 1px solid #aaa
-	padding: 0.2em 0.5em
-	&:focus
-		+box-shadow(0px 0px 3px $secondary)
-		border-color: #555
+  +transition(all 0.2s ease-in)
+  outline: none
+  border: 1px solid #aaa
+  padding: 0.2em 0.5em
+  &:focus
+    +box-shadow(0px 0px 3px $secondary)
+    border-color: #555
 
 =default-input
-	+input-size(".form-control", 1.2em, 0.2em, 0.5em, 1em, 1.4, 0)
-	border-width: 1px
+  +input-size(".form-control", 1.2em, 0.2em, 0.5em, 1em, 1.4, 0)
+  border-width: 1px
+
+=box-img-only($title: title, $button: button, $spacing: $spacing) 
+  position: relative
+  +clearfix
+  img
+    margin: 0px
+    padding: 0px
+  @if $title == title
+    .title
+      position: absolute
+      top: 0px
+      left: 0px
+      width: 100%
+      padding: $spacing 2*$spacing
+  @if $button == button
+    .button
+      position: absolute
+      bottom: $spacing
+      left: 2*$spacing
 
 
-=box-normal
-	img
-		margin-bottom: 1em
-=box-img-only($title: title, $button: button, $spacing: $spacing)	
-	position: relative
-	+clearfix
-	img
-		margin: 0px
-		padding: 0px
-	@if $title == title
-		.title
-			position: absolute
-			top: 0px
-			left: 0px
-			width: 100%
-			padding: $spacing 2*$spacing
-	@if $button == button
-		.button
-			position: absolute
-			bottom: $spacing
-			left: 2*$spacing
-			
+=heading
+  font-size: 1.6em  
+  font-weight: 700
+  line-height: 2 
 
-
-
-
-		
-
-
-
-
-=nav-level-1 ($bg-color: #fff, $color: $accent, $hover-bg-color: $accent, $hover-color: #fff)
-	display: inline-block
-	padding: 0.2em 1em
-	background-color: $bg-color
-	color: $color
-	&:hover
-		background-color: $hover-bg-color
-		color: $hover-color
-	&.active
-		background-color: $hover-bg-color
-		color: $hover-color
-=nav-level-2 ($bg-color: transparent, $color: $accent, $hover-bg-color: transparent, $hover-color: #fff)
-	display: inline-block
-	padding: 0.2em 1em
-	background-color: $bg-color
-	color: $color
-	&:hover
-		background-color: $hover-bg-color
-		color: $hover-color
-	&.active
-		background-color: $hover-bg-color
-		color: $hover-color	
+=optional-at-root($sel) 
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} 
+    @content
+=placeholder
+  +optional-at-root('::-webkit-input-placeholder')
+    @content
+  +optional-at-root(':-moz-placeholder')
+    @content 
+  +optional-at-root('::-moz-placeholder')
+    @content 
+  +optional-at-root(':-ms-input-placeholder')
+    @content  

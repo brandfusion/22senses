@@ -1,272 +1,352 @@
 body
-	background-color: #fff	
-	@media (min-width: $screen-sm-min)
-		background-color: #fff	
+  background-color: #fff  
+  @media (min-width: $screen-sm-min)
+    background-color: #fff   
 .container
-	+container-fixed
-	@media (min-width: $screen-sm-min)
-		width: $container-sm
-	@media (min-width: $screen-md-min)
-		width: $container-md
-	@media (min-width: $screen-lg-min)
-		width: $container-lg
+  +container-fixed
+  @media (min-width: $screen-sm-min)
+    width: $container-sm
+  @media (min-width: $screen-md-min)
+    width: $container-md
+  @media (min-width: $screen-lg-min)
+    width: $container-lg
 .wrapper 
-	// background-color: #fff
-	background-color: rgba(255,255,255,0.95)
+  // background-color: #fff
+  background-color: rgba(255,255,255,0.95)
+.heading
+  +heading  
+  .checkout-heading & 
+    margin: 0 0.6em
+  .category-heading & 
+    margin: 0 0.6em
 .block-header
-	font-weight: 800
-	font-size: 1.4em
-	margin-bottom: $spacing/2
-	line-height: 1.6em
-	// text-transform: uppercase
+  font-weight: 800
+  font-size: 1.4em
+  margin-bottom: $spacing/2
+  line-height: 1.6em
+  // text-transform: uppercase
 .page-header
-	margin: 0px 0px $spacing
-	padding-left: $spacing
-	font-weight: 300
-	font-size: 1.6em
-	text-transform: uppercase
-	// border-bottom: 1px solid #000
-	background-color: #fff
-	color: #000
-	border-bottom: none
-	font-weight: 800
-	&:after
-		margin-left: 5px
-		margin-right: 5px
-		font-weight: 300
-		color: $primary
+  margin: 0px 0px $spacing
+  padding-left: $spacing
+  font-weight: 300
+  font-size: 1.6em
+  text-transform: uppercase
+  // border-bottom: 1px solid #000
+  background-color: #fff
+  color: #000
+  border-bottom: none
+  font-weight: 800
+  &:after
+    margin-left: 5px
+    margin-right: 5px
+    font-weight: 300
+    color: $primary
 .aside
-	+make-sm-column(4)
-	+make-md-column(2)
+  +make-sm-column(4)
+  +make-md-column(2)
 .breadcrumbs
-	background: #F9F9F9
-	margin: 0 0 $spacing 0
-	font-size: 0.9em
-	clear: both
-	width: 100%
-	padding: 0.3em $spacing
-	float: left
-	ul
-		+h-nav
-		a
-			color: #000			
-			&:hover
-				color: $primary
-		li 
-			font-size: 0.8em
-			font-weight: 400
-			line-height: 2.2em
-			&:after
-				content: "-"
-				margin-left: 5px
-				margin-right: 5px
-				font-weight: 700
-				color: #777
-			&:last-child:after
-				display: none
+  background: #F9F9F9
+  // margin: 0 0 $spacing 0
+  font-size: 0.9em
+  clear: both
+  width: 100%
+  padding: 0.3em $spacing 
+  ul
+    +h-nav
+    a
+      color: #000     
+      &:hover
+        color: $primary
+    li 
+      font-size: 0.8em
+      font-weight: 400
+      line-height: 2.2em
+      &:after
+        content: "-"
+        margin-left: 5px
+        margin-right: 5px
+        font-weight: 700
+        color: #777
+      &:last-child:after
+        display: none
 .wrap
-	@extend .container
-	// background-color: $gray-main
-	// background-color: rgba(250,250,250,0.9)
-	background-color: #fff
-	background-color: rgba(255,255,255,0.8)
-	padding: 0px
-	+transition(all 0.2s ease-in)
+  @extend .container
+  // background-color: $gray-main
+  // background-color: rgba(250,250,250,0.9)
+  background-color: #fff
+  background-color: rgba(255,255,255,0.8)
+  padding: 0px
+  +transition(all 0.2s ease-in)
 .row
-	+make-row			
+  +make-row     
 
 .modal-open
-	padding-right: 0px
-	overflow-y: scroll
-	.modal		
-		background-color: rgba(255,255,255,0)
-		&.fade
-			background-color: rgba(255,255,255,0.6)
+  padding-right: 0px
+  overflow-y: scroll
+  .modal    
+    background-color: rgba(255,255,255,0)
+    &.fade
+      background-color: rgba(255,255,255,0.6)
 .modal-content
-	border-radius: 0px 
-	border: 1px solid $secondary
-	box-shadow: 0px 0px 3px $secondary		
-	font-size: 0.8em
-	a 
-		color: #000
-		&:hover 
-		text-decoration: underline
-	.modal-header
-		+clearfix
-		padding: 0.5em $spacing
-		h6	
-			font-weight: 700
-			color: $secondary
-			font-size: 1em			
-		button
-			outline: none
-			border: none
-			color: $red
-			float: right	
-			background-color: #fff
-	select
-		+fancy-input
-		display: block
-		width: 100%
-		max-width: 200px
-		margin-bottom: 0.5em
-	input
-		+fancy-input	
-		display: block	
-		width: 100%
-		max-width: 200px
-		margin-bottom: 0.5em
-	textarea
-		+fancy-input	
-		display: block
-		width: 100%
-		max-width: 100%
-		margin-bottom: 0.5em
-		min-height: 10em
-	.modal-body	
-		padding: $spacing
-		button
-			padding: 0.5em
-			max-width: 200px
-			width: 100%
-			
-.comment-block	.modal-content .modal-body button
-	&:before
-		font-family: "FontAwesome"
-		content: "\f0e5"
-		margin-right: 0.5em		
+  border-radius: 0px 
+  border: 1px solid $secondary
+  box-shadow: 0px 0px 3px $secondary    
+  font-size: 0.8em
+  a 
+    color: #000
+    &:hover 
+    text-decoration: underline
+  .modal-header
+    +clearfix
+    padding: 0.5em $spacing
+    h6  
+      font-weight: 700
+      color: $secondary
+      font-size: 1em      
+    button
+      outline: none
+      border: none
+      color: $red
+      float: right  
+      background-color: #fff
+  select
+    +fancy-input
+    display: block
+    width: 100%
+    max-width: 200px
+    margin-bottom: 0.5em
+  input
+    +fancy-input  
+    display: block  
+    width: 100%
+    max-width: 200px
+    margin-bottom: 0.5em
+  textarea
+    +fancy-input  
+    display: block
+    width: 100%
+    max-width: 100%
+    margin-bottom: 0.5em
+    min-height: 10em
+  .modal-body 
+    padding: $spacing
+    button
+      padding: 0.5em
+      max-width: 200px
+      width: 100%
+      
+.comment-block  .modal-content .modal-body button
+  &:before
+    font-family: "FontAwesome"
+    content: "\f0e5"
+    margin-right: 0.5em   
 
 .blur 
-	-webkit-filter: blur(5px)	
+  -webkit-filter: blur(5px) 
 .list-header
-	font-size: 1em
-	font-weight: 800
-	text-transform: uppercase
-	border-bottom: 1px solid #000
-	margin: 0 $spacing 0.5em
-	padding-bottom: 0.5em
-	line-height: 1
-	display: block
+  font-size: 1em
+  font-weight: 800
+  text-transform: uppercase
+  border-bottom: 1px solid #000
+  margin: 0 $spacing 0.5em
+  padding-bottom: 0.5em
+  line-height: 1
+  display: block
 .section-header
-	font-size: 1em
-	font-weight: 800
-	text-transform: uppercase
-	border-bottom: 1px solid #000
-	margin: 0 0 0.5em
-	padding-bottom: 0.5em
-	line-height: 1
-	display: block	
+  font-size: 1em
+  font-weight: 800
+  text-transform: uppercase
+  border-bottom: 1px solid #000
+  margin: 0 0 0.5em
+  padding-bottom: 0.5em
+  line-height: 1
+  display: block  
 #brands-page
-	+make-row	
-.logos-list	
-	+clearfix
-	padding-top: 1em
-	.item
-		+make-sm-column(2,10)
-		margin-bottom: $spacing*2
-	.box-item
-		// border: 1px solid #ddd		
-		height: 104px		
-		a 
-			display: block
-			&:hover 
-				+scale(1.1)
-		img 
-			max-height: 65px
-			margin: 0 auto
+  +make-row 
+.logos-list 
+  +clearfix
+  padding-top: 1em
+  .item
+    +make-sm-column(2,10)
+    margin-bottom: $spacing*2
+  .box-item
+    // border: 1px solid #ddd   
+    height: 104px   
+    a 
+      display: block
+      &:hover 
+        +scale(1.1)
+    img 
+      max-height: 65px
+      margin: 0 auto
 .team-item
-	+clearfix
-	font-size: 0.8em
-	margin-bottom: $spacing
-	img 
-		float: left 
-		margin: 10px 20px 0 0
+  +clearfix
+  font-size: 0.8em
+  margin-bottom: $spacing
+  img 
+    float: left 
+    margin: 10px 20px 0 0
 .default-paragraph
-	font-size: initial		
+  font-size: initial    
 .general-paragraph
-	font-size: 0.8em
-	padding: 5% 0px
-	margin: 0 auto
-	a 
-		color: #000
-		text-decoration: underline
-	h1 
-		margin: 0px 0px 0.5em
-		font-weight: 300
-		font-size: 1.6em
-		text-transform: uppercase
-		background-color: #fff
-		color: #000
-		border-bottom: none
-		font-weight: 800
-		clear: both
+  font-size: 0.8em
+  padding: 5% 0px
+  margin: 0 auto
+  a 
+    color: #000
+    text-decoration: underline
+  h1 
+    margin: 0px 0px 0.5em
+    font-weight: 300
+    font-size: 1.6em
+    text-transform: uppercase
+    background-color: #fff
+    color: #000
+    border-bottom: none
+    font-weight: 800
+    clear: both
 
-	h3 
-		font-weight: 800
-		text-transform: uppercase	
-		a 
-			
-			text-decoration: none
-			&:hover 
-				color: #000		
+  h3 
+    font-weight: 800
+    text-transform: uppercase 
+    a 
+      
+      text-decoration: none
+      &:hover 
+        color: #000   
 .wrapper-fix
-	font-size: 1em
-	padding: 0 $spacing
-	margin: 0 auto $spacing auto
-	padding: 1em 0
-				
-	.content-login
-		
-		width: 100%
-		float: none		
-		font-size: 1em
-		+clearfix
-		.login-block
-			+make-sm-column(12)
-			+make-sm-column(6)
-			+make-md-column(6)
-			
-		p
-			font-size: 0.8em	
-		label
-			font-weight: 600
-			font-size: 0.8em
-			width: 25% 
-			display: inline-block
-			margin-bottom: 0
-			vertical-align: middle
+  font-size: 1em
+  padding: 0 $spacing
+  margin: 0 auto $spacing auto
+  padding: 1em 0
+        
+  .content-login
+    
+    width: 100%
+    float: none   
+    font-size: 1em
+    +clearfix
+    .login-block
+      +make-sm-column(12)
+      +make-sm-column(6)
+      +make-md-column(6)
+      
+    p
+      font-size: 0.8em  
+    label
+      font-weight: 600
+      font-size: 0.8em
+      width: 25% 
+      display: inline-block
+      margin-bottom: 0
+      vertical-align: middle
 
-			@media (min-width: $screen-lg-min)
-				width: 40%
-			&.address 
-				width: 90%
-				@media (min-width: $screen-lg-min)
-					margin-bottom: 4.8em
-		input[type="text"],input[type="email"],input[type="password"]
-			width: 45%
-			// max-width: 200px
-			border: 1px solid #aaa
-			box-shadow: 0px 0px 3px #eee	
-			line-height: 2em
-			padding: 0 0.5em
-			&:focus 
-				border-color: $secondary
-				box-shadow: 0px 0px 3px rgba(0,190,212,0.4)	
-		.terms 
-			font-size: 0.8em
-		.login 
-			text-align: center
-			text-transform: none
+      @media (min-width: $screen-lg-min)
+        width: 40%
+      &.address 
+        width: 90%
+        @media (min-width: $screen-lg-min)
+          margin-bottom: 4.8em
+    input[type="text"],input[type="email"],input[type="password"]
+      width: 45%
+      // max-width: 200px
+      border: 1px solid #aaa
+      box-shadow: 0px 0px 3px #eee  
+      line-height: 2em
+      padding: 0 0.5em
+      &:focus 
+        border-color: $secondary
+        box-shadow: 0px 0px 3px rgba(0,190,212,0.4) 
+    .terms 
+      font-size: 0.8em
+    .login 
+      text-align: center
+      text-transform: none
 .videoWrapper
-	position: relative
-	padding-bottom: 56.25% /* 16:9 */
-	padding-top: 25px
-	height: 0
+  position: relative
+  padding-bottom: 56.25% /* 16:9 */
+  padding-top: 25px
+  height: 0
 .videoWrapper iframe
-	position: absolute
-	top: 0
-	left: 0
-	width: 100%
-	height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
 .html5-video-player a
-	font-size: 0.5em !important
+  font-size: 0.5em !important
+
+select, input[type="text"], input[type="email"], input[type="password"], textarea
+  &.input-correct
+    border: 1px solid #1BC208
+    background-color: #D8F7D7 
+  &.input-error
+    border: 1px solid #ff0049
+    background-color: #FFC7D7    
+
+// Popup    
+.login-popup
+  background-color: $primary
+  max-width: 300px
+  color: #fff    
+  padding: 1em
+  border-radius: 0.5em
+  display: none
+  .action
+    background-color: #fff
+    display: inline-block
+    font-size: 0.8em
+    padding: 0 2em
+    color: $redsecondary
+    line-height: 2
+    &:hover 
+      background-color: $redsecondary
+      color: #fff
+  .info 
+    font-size: 0.8em
+    margin-bottom: 0
+    color: #500118
+    a 
+      color: #fff
+      text-decoration: underline
+      &:hover 
+        color: #FFB7CB
+        text-decoration: underline  
+  input 
+    font-size: 0.8em      
+    +placeholder
+      color: #FFB7CB
+.b-modal
+  background-color: #fff !important
+  background-color: rgb(241, 207, 218) !important
+  opacity: 0.9 !important     
+  transition: all 0.3s ease-out !important
+.b-popup-title
+  font-size: 1.2em
+  font-weight: 300
+  margin-bottom: 0.6em  
+.b-popup-body
+  input
+    background-color: $redsecondary
+    border: none
+    padding: 0.5em  
+    &:focus, &:hover 
+      background-color: #8C082E
+.password-icon
+  position: relative 
+  &:after 
+    font-family: "FontAwesome"
+    content: "\f084"
+    position: absolute
+    right: 0.5em
+    top: 0.2em
+    color: $primary
+.user-icon
+  position: relative 
+  &:after 
+    font-family: "FontAwesome"
+    content: "\f007"
+    position: absolute
+    right: 0.5em
+    top: 0.2em
+    color: $primary    

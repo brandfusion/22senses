@@ -2,6 +2,7 @@ html
 	font-size: 1em
 * 
 	box-sizing: border-box 	
+	// +transition(all 0.3s ease-out)
 body 
 	background-color: #FFF
 	font-family: "Open Sans", Verdana, sans-serif	
@@ -11,17 +12,17 @@ body
 	line-height: 1.4
 p
 	margin: 0 0 1em
-a
-	display: inline-block
 h1, h2, h3, h4, h5, h6 
 	font-weight: 600
 	margin: 0
 a
+	display: inline-block
 	color: $primary
 	text-decoration: none
-	+transition(ease-in,0.2s)
-	&:hover
+	+transition(all 0.3s ease-out)
+	&:hover,  &:focus
 		color: $secondary
+		text-decoration: none
 img
 	+img-responsive()
 ul
@@ -30,13 +31,11 @@ ul
 	list-style-type: none
 input
 	outline: none	
-	width: 100%
-	+transition(all 0.3s ease-out)
+	width: 100%	
 button 	
-	border: none 
-	+transition(all 0.3s ease-out)	
-select	
-	+transition(all 0.3s ease-out)
+	border: none 	
+	outline: none	
+select		
 .row
 	+make-row	
 .hidden
@@ -47,3 +46,5 @@ input[type="checkbox"], input[type="radio"]
 	margin-top: 3px
 fieldset
 	font-size: 0.8em
+p, a, input, select, textarea, button
+	+transition(all 0.3s ease-out)	
