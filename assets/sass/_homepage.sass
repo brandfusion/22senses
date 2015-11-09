@@ -1,84 +1,134 @@
 .home-boxes
-	+make-row()
-	.title
-		font-weight: 300
-		font-size: 1.3em
-		margin-bottom: 0.5em
-	img 
-		margin-bottom: 1em
-	.wide
-		+make-sm-column(4)		
-	.narrow
-		+make-sm-column(2)	
-	.test2
-		+box-img-only()
-	.test3
-		+box-img-only()
-	.test4
-		+box-img-only()
-.featured-list	
-	h2
-		text-transform: uppercase
-		font-size: 1em
-		font-weight: 400
-		color: #222
-		padding: 0 $spacing $spacing/2
-	.product-list
-		+clearfix
-		+make-row
-		.item 		
-			+make-xs-column(6)
-			+make-sm-column(4)
-			+make-md-column(2,10)
-			+make-lg-column(2,10)	
-			h3
-				min-height: 15px !important
-.category-list	
-	h2
-		text-transform: uppercase
-		font-size: 1em
-		font-weight: 400
-		color: #222
-		padding: 0 $spacing $spacing/2			
-	.product-list
-		+clearfix
-		+make-row
-		.item 		
-			+make-xs-column(12)
-			+make-sm-column(4)
-			+make-md-column(4)
-			+make-lg-column(4)	
-			float: left
-			.product-box 
-				height: 320px
-				padding-bottom: 0				
-			a, .product-item-image 
-				padding: 0
-				margin: 0
-				height: 320px
-			img 
-				width: 100%
-			.product-item-title 
-				height: 320px
-				display: inline-block
-				width: 100%
-				padding: 25% 0
-				text-align: center
-				margin: 0
-				vertical-align: middle
-				color: #fff
-				font-weight: 600
-				font-size: 4em
-				text-transform: uppercase
-				letter-spacing: -3px
-				line-height: 1
+  +make-row()
+  .title
+    font-weight: 300
+    font-size: 1.3em
+    margin-bottom: 0.5em
+  img 
+    margin-bottom: 1em
+  .wide
+    +make-sm-column(4)    
+  .narrow
+    +make-sm-column(2)  
+  .test2
+    +box-img-only()
+  .test3
+    +box-img-only()
+  .test4
+    +box-img-only()
+.featured-list  
+  h2
+    text-transform: uppercase
+    font-size: 1em
+    font-weight: 400
+    color: #222
+    padding: 0 $spacing $spacing/2
+  .product-list
+    +clearfix
+    +make-row
+    .item     
+      +make-xs-column(6)
+      +make-sm-column(4)
+      +make-md-column(2,10)
+      +make-lg-column(2,10) 
+      h3
+        min-height: 15px !important
+.category-list  
+  h2
+    text-transform: uppercase
+    font-size: 1em
+    font-weight: 400
+    color: #222
+    padding: 0 $spacing $spacing/2      
+  .product-list
+    +clearfix
+    +make-row
+    .item     
+      +make-xs-column(12)
+      +make-sm-column(4)
+      +make-md-column(4)
+      +make-lg-column(4)  
+      float: left
+      .product-box 
+        height: 320px
+        padding-bottom: 0       
+      a, .product-item-image 
+        padding: 0
+        margin: 0
+        height: 320px
+      img 
+        width: 100%
+      .product-item-title 
+        height: 320px
+        display: inline-block
+        width: 100%
+        padding: 25% 0
+        text-align: center
+        margin: 0
+        vertical-align: middle
+        color: #fff
+        font-weight: 600
+        font-size: 4em
+        text-transform: uppercase
+        letter-spacing: -3px
+        line-height: 1
 
-				span 
-					font-weight: 400
-					font-size: 0.4em
-					font-style: italic
-					text-transform: none
-					letter-spacing: 0
-
-
-	
+        span 
+          font-weight: 400
+          font-size: 0.4em
+          font-style: italic
+          text-transform: none
+          letter-spacing: 0
+.featuredParagraphHomepage
+  background-color: #d41c51     
+  color: #fff
+  margin-bottom: 2em
+  // margin-top: 1em
+  background: linear-gradient(to right, rgb(223, 19, 78) 0%, rgb(245, 23, 88) 50%, rgb(223, 19, 78) 100%)
+  .media 
+    // padding: 2em
+    // background-color: #E81552
+    // border: 1px solid #DD1850
+    // box-shadow: 0px 0px 4em #FB1758
+  .intro-article
+    padding: 2*$spacing 4em
+    margin: 0
+    border: 0
+    margin-left: -$spacing
+    margin-right: -$spacing
+    h2 
+      font-weight: 300
+    .article-main-button
+      border-color: #fff 
+      color: #fff  
+      margin-top: 2em
+    .article-secondary-button
+      margin-top: 2em
+      
+.animateParagraphHomepage
+  background-color: #EEEEEE
+  margin-bottom: 2em
+  margin-top: 1em
+  .intro-article
+    padding: 2*$spacing 4em
+    margin: 0
+    border: 0
+    margin-left: -$spacing
+    margin-right: -$spacing
+    h2 
+      font-weight: 300
+    .article-main-button
+      border-color: #000 
+      color: #000 
+      margin-top: 2em
+.grayStyle
+  background-color: #eee
+  margin-bottom: 2em
+  margin-top: 0em
+  padding: 2em 0
+.homepageSliderStyle
+  background-color: #FFFFFF
+  box-shadow: 0px 5px 5px #B51342
+  overflow: visible
+  z-index: 3
+  position: relative  

@@ -1,9 +1,16 @@
 .home-slider-wrapper
 	+make-row
 	+clearfix
-	padding: $spacing	
-	padding-top: 0px
+	padding: 0 $spacing	
 	position: relative	
 	clear: both
+	margin-bottom: 1em
 .flexslider
 	border: 0px
+	margin: 0
+	.flex-control-nav
+		bottom: 0px
+	.flex-control-paging li a.flex-active	
+		background: $primary
+	.flex-control-paging li a
+		background: rgba(255, 255, 255, 0.89)	
