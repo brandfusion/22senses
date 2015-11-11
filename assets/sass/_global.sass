@@ -21,7 +21,7 @@ body
     margin: 0 0.6em
   &--category
     margin: 0
-    border-bottom: 1px solid #000
+    // border-bottom: 1px solid #000
     margin-bottom: 0.5em
     line-height: 2em  
   .landing-heading & 
@@ -69,12 +69,14 @@ body
   +make-sm-column(4)
   +make-md-column(2)
 .breadcrumbs
-  background: #F9F9F9
+  // background: #F9F9F9
   // margin: 0 0 $spacing 0
   font-size: 0.9em
   clear: both
   width: 100%
   padding: 0.3em $spacing 
+  padding-top: 0
+  margin-bottom: 0.5em
   ul
     +h-nav
     a
@@ -375,6 +377,6 @@ select, input[type="text"], input[type="email"], input[type="password"], textare
     top: 0.2em
     color: $primary    
 .landing-heading
-  box-shadow: 0px 5px 5px #B51342
+  box-shadow: 0px 2px 2px #B51342
   z-index: 3
   position: relative    
